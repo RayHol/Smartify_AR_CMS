@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CMS UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.glitch.global/e6d49347-925b-463e-b7cb-e5d3b1d6f278/Smartify-logo.svg?v=1688381357856" alt="Logo" width="150" height="auto">
+        <h1>CMS Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#audio">Audio</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#markers">Tracking Markers</a></li>
+            <li><a href="#text">Text Content</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="videos">
+            <h2>Videos</h2>
+            <form action="/upload/video" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Video Name">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="audio">
+            <h2>Audio</h2>
+            <form action="/upload/audio" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Audio Name">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="images">
+            <h2>Images</h2>
+            <form action="/upload/image" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Image Name">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="markers">
+            <h2>Tracking Markers</h2>
+            <form action="/upload/marker" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Marker Name">
+                <input type="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="text">
+            <h2>Text Content</h2>
+            <form action="/upload/text" method="POST">
+                <textarea name="content" placeholder="Enter text content"></textarea>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Smartify. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
